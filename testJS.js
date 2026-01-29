@@ -65,8 +65,10 @@ console.log(NumbersArray.prototype === myArr.__proto__)*/
 
     const asyncfn = async() => {
         console.log('start timer')
+        const startTime = performance.now()
         await timerPromise()
-        console.log('finish timer');
+        const finishTime = performance.now()
+        console.log('finish timer', finishTime - startTime);
     }
 
     asyncfn()
