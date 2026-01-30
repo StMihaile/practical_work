@@ -57,7 +57,7 @@ console.log(NumbersArray.prototype === myArr.__proto__)*/
         .catch (error => console.log(error.message))*/
 
 
-    const timerPromise = () => 
+    /*const timerPromise = () => 
         new Promise((resolve, reject) => {
             setTimeout(()=>resolve(), 2000)
         })
@@ -71,4 +71,40 @@ console.log(NumbersArray.prototype === myArr.__proto__)*/
         console.log('finish timer', finishTime - startTime);
     }
 
-    asyncfn()
+    asyncfn()*/
+
+    /*const getDate = async (url) => {
+    const res = await fetch(url)
+    const json = await res.json()
+    return json
+    }
+
+    getDate('https://jsonplaceholder.org/users')
+    .then (data => console.log(dat))
+    .catch (error => console.log(error.message))*/
+
+    /*const getDate = async (url) => {
+    const res = await fetch(url)
+    const json = await res.json()
+    return json
+    }
+
+    const url = 'https://jsonplaceholder.org/comments/1'
+
+    const data = await getDate(url)
+    console.log(data);*/
+
+const getDate = async(url) => {
+    const res = await fetch(url)
+    const json = await res.json()
+    return json
+}
+
+ const url = 'https://jsonplaceholder.org/comments'
+
+try {
+    const data = await getDate(url)
+    console.log(data);
+} catch (error) {
+    console.log(error.message);
+}
